@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Andrew's Lights</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src='/javascripts/index.js'></script>
+  </head>
+  <body>
+    <h1>Welcome to Andrew's Lights</h1>
+    <br>
+      <% if (lightEffects.length) { %>
+        <% lightEffects.forEach((lightEffect) => {
+        %>
+          <a href="#" onclick="changeLights('<%- lightEffect -%>'); return false;">
+            <h2><%= lightEffect %></h2>
+          </a>
+          <br>
+        <%
+        }) %>
+      <%} %>
+  </body>
+</html>
